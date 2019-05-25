@@ -7,8 +7,7 @@ namespace Excellence\PushNotification\Controller\Notification;
 
 class Index extends \Magento\Framework\App\Action\Action
 {
-
-	/**
+    /**
      * @var \Magento\Framework\App\Cache\TypeListInterface
      */
     protected $_cacheTypeList;
@@ -36,7 +35,7 @@ class Index extends \Magento\Framework\App\Action\Action
      * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
      */
     public function __construct(
-       \Magento\Framework\App\Action\Context $context,
+        \Magento\Framework\App\Action\Context $context,
         \Magento\Framework\App\Cache\TypeListInterface $cacheTypeList,
         \Magento\Framework\App\Cache\StateInterface $cacheState,
         \Magento\Framework\App\Cache\Frontend\Pool $cacheFrontendPool,

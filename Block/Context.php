@@ -157,9 +157,10 @@ class Context extends \Magento\Framework\View\Element\Template\Context
 	 * Function for getting pushnotification model config object 
      * @return \Excellence\PushNotification\Model\Config
      */
-	public function getConfig(){
-		return $this->_config;
-	}
+    public function getConfig()
+    {
+        return $this->_config;
+    }
 	
 	/**
 	 * Function for getting object manager object 

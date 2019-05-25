@@ -21,8 +21,7 @@ class InstallSchema implements InstallSchemaInterface
     {
         $installer = $setup;
         $installer->startSetup();
-
-		/**
+        /**
          * Create table 'pushnotification_notification'
          */
         $table = $installer->getConnection()->newTable(

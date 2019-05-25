@@ -96,17 +96,17 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
      */
     protected function _prepareCollection()
     {
-		try{
-			$collection =$this->_collectionFactory->load();
-			$this->setCollection($collection);
-			parent::_prepareCollection();
-		  
-			return $this;
-		}
-		catch(Exception $e)
-		{
-			echo $e->getMessage();die;
-		}
+        try{
+            $collection =$this->_collectionFactory->load();
+            $this->setCollection($collection);
+            parent::_prepareCollection();
+            
+            return $this;
+        }
+        catch(Exception $e)
+        {
+            echo $e->getMessage();die;
+        }
     }
     /**
      * @param \Magento\Backend\Block\Widget\Grid\Column $column

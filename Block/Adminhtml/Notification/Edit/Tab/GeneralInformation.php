@@ -38,7 +38,7 @@ class GeneralInformation extends \Magento\Backend\Block\Widget\Form\Generic impl
      */
     protected function _prepareForm()
     {
-		/* @var $model \Magento\Cms\Model\Page */
+        /* @var $model \Magento\Cms\Model\Page */
         $model = $this->_coreRegistry->registry('pushnotification_notification');
         $isElementDisabled = false;
         /** @var \Magento\Framework\Data\Form $form */

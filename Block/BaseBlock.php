@@ -78,7 +78,7 @@ class BaseBlock extends \Magento\Framework\View\Element\Template
 		if($isEnabled)
 		{
 			$allowedIps=$this->getConfigValue('pushnotification/module/allowed_ip');
-			 if(is_null($allowedIps)){
+			if(is_null($allowedIps)){
 				return true;
 			}
 			else {
@@ -89,6 +89,5 @@ class BaseBlock extends \Magento\Framework\View\Element\Template
 			}
 		}
 		return false;
-	}
-	
+	}	
 }

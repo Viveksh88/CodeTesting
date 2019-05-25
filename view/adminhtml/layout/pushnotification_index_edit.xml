@@ -5,7 +5,7 @@
     </head>
     <update handle="editor"/>
     <body>
-	    <referenceContainer name="content">
+        <referenceContainer name="content">
             <block class="Excellence\PushNotification\Block\Adminhtml\Notification\Edit" name="pushnotification_notification_edit"/>
         </referenceContainer>
         <referenceContainer name="left">
