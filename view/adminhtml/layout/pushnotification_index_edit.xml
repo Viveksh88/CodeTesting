@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <head>
+        <script src="Excellence_PushNotification::js/customNotification.js"/>
+    </head>
+    <update handle="editor"/>
+    <body>
+	    <referenceContainer name="content">
+            <block class="Excellence\PushNotification\Block\Adminhtml\Notification\Edit" name="pushnotification_notification_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Excellence\PushNotification\Block\Adminhtml\Notification\Edit\Tabs" name="pushnotification_notification_edit_tabs">
+            <block class="Excellence\PushNotification\Block\Adminhtml\Notification\Edit\Tab\GeneralInformation" name="pushnotification_notification_edit_tab_generalinformation"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">generalinformation_section</argument>
+                    <argument name="block" xsi:type="string">pushnotification_notification_edit_tab_generalinformation</argument>
+                </action>
+                <block class="Excellence\PushNotification\Block\Adminhtml\Notification\Edit\Tab\Trigger" name="pushnotification_notification_edit_tab_trigger"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">trigger_section</argument>
+                    <argument name="block" xsi:type="string">pushnotification_notification_edit_tab_trigger</argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
