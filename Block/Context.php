@@ -12,11 +12,6 @@ namespace Excellence\PushNotification\Block;
 class Context extends \Magento\Framework\View\Element\Template\Context
 {
     /**
-     * @var \Excellence\PushNotification\Helper\Data
-     */
-    protected $_devToolHelper;
-
-    /**
      * @var \Magento\Framework\Registry
      */
     protected $registry;
@@ -61,7 +56,6 @@ class Context extends \Magento\Framework\View\Element\Template\Context
      * @param \Magento\Framework\View\Page\Config $pageConfig
      * @param \Magento\Framework\View\Element\Template\File\Resolver $resolver
      * @param \Magento\Framework\View\Element\Template\File\Validator $validator
-     * @param \Excellence\PushNotification\Helper\Data $devToolHelper
      * @param \Magento\Framework\Registry $registry
      * @param \Excellence\PushNotification\Model\Config $config
      * @param \Magento\Framework\ObjectManagerInterface
@@ -94,13 +88,11 @@ class Context extends \Magento\Framework\View\Element\Template\Context
         \Magento\Framework\View\Page\Config $pageConfig,
         \Magento\Framework\View\Element\Template\File\Resolver $resolver,
         \Magento\Framework\View\Element\Template\File\Validator $validator,
-        \Excellence\PushNotification\Helper\Data $devToolHelper,
         \Magento\Framework\Registry $registry,
         \Excellence\PushNotification\Model\Config $config,
         \Magento\Framework\ObjectManagerInterface $objectManager,
         \Magento\Framework\UrlFactory $urlFactory
     ) {
-        $this->_devToolHelper = $devToolHelper;
         $this->registry = $registry;
         $this->_config = $config;
         $this->_objectManager=$objectManager;
@@ -133,17 +125,6 @@ class Context extends \Magento\Framework\View\Element\Template\Context
             $validator
         );
     }
-
-    /**
-	 * Function for getting developer helper object
-     * @return \Excellence\PushNotification\Helper\Data
-     */
-    public function getPushNotificationHelper()
-    {
-        return $this->_devToolHelper;
-    }
-
-
     /**
      * Function for getting registry object
      * @return \Magento\Framework\Registry
@@ -166,16 +147,14 @@ class Context extends \Magento\Framework\View\Element\Template\Context
 	 * Function for getting object manager object 
      * @return \Magento\Framework\ObjectManagerInterface
      */
-	public function getObjectManager(){
-		return $this->_objectManager;
-	}
-	
-	/**
+    public function getObjectManager(){
+        return $this->_objectManager;
+    }
+    /**
 	 * Function for getting UrlFactory object 
      * @return \Magento\Framework\UrlFactory
      */
-	public function getUrlFactory(){
-		return $this->_urlFactory;
-	}
-
+    public function getUrlFactory(){
+        return $this->_urlFactory;
+    }
 }

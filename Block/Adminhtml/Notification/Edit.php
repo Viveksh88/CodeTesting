@@ -27,16 +27,6 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
             ),
             -100
         );
-
-        $this->_formScripts[] = "
-            function toggleEditor() {
-                if (tinyMCE.getInstanceById('block_content') == null) {
-                    tinyMCE.execCommand('mceAddControl', false, 'notification_content');
-                } else {
-                    tinyMCE.execCommand('mceRemoveControl', false, 'notification_content');
-                }
-            }
-        ";
     }
 
     /**
@@ -47,9 +37,9 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
     public function getHeaderText()
     {
         if ($this->_coreRegistry->registry('checkmodule_checkmodel')->getId()) {
-            return __("Edit Item '%1'", $this->escapeHtml($this->_coreRegistry->registry('checkmodule_checkmodel')->getTitle()));
+            return __("Edit Notification '%1'", $this->escapeHtml($this->_coreRegistry->registry('checkmodule_checkmodel')->getTitle()));
         } else {
-            return __('New Item');
+            return __('New Notification');
         }
     }
 }

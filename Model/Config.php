@@ -9,8 +9,7 @@ namespace Excellence\PushNotification\Model;
  */
 class Config extends \Magento\Framework\DataObject
 {
-
-	/**
+    /**
      * @var \Magento\Store\Model\StoreManagerInterface
      */
     protected $_storeManager;
@@ -86,10 +85,8 @@ class Config extends \Magento\Framework\DataObject
                     'scope_code' => $this->_storeCode,
                     'value' => $value,
                 ];
-
 		$this->_backendModel->addData($data);
 		$this->_transaction->addObject($this->_backendModel);
 		$this->_transaction->save();
-	}
-	
+	}	
 }

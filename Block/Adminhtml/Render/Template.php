@@ -20,7 +20,7 @@ class Template extends AbstractRenderer
     }
     
     public function render(DataObject $row)
-    {       
+    {
         $rowData = $row->getData();
         $templateId = $rowData['template'];
         $templateArray = $this->_templates->optionArray();

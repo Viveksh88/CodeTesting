@@ -24,16 +24,6 @@ class General extends \Magento\Backend\Block\Widget\Form\Generic implements \Mag
         $this->_systemStore = $systemStore;
         parent::__construct($context, $registry, $formFactory, $data);
     }
-
-    /**
-     * Prepare form
-     *
-     * @return $this
-     */
-    protected function _prepareForm()
-    {
-    }
-
     /**
      * Prepare label for tab
      *

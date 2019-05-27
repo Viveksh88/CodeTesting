@@ -165,7 +165,7 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
         $this->addColumn(
             'template',
             [
-                'header' => __('template'),
+                'header' => __('Template'),
                 'index' => 'template',
                 'class' => 'template',
                 'renderer' => \Excellence\PushNotification\Block\Adminhtml\Render\Template::class
